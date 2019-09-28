@@ -96,7 +96,7 @@ class NoteDetailState extends State<NoteDetail> {
                   controller: descriptionController,
                   style: textStyle,
                   onChanged: (value) {
-                    print('Something changed in Tile Text field');
+                    print('Something changed in Description Text field');
                     updateDescription();
                   },
                   decoration: InputDecoration(
