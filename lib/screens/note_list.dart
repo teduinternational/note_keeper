@@ -7,7 +7,6 @@ import 'package:sqflite/sqflite.dart';
 class NoteList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return NoteListState();
   }
 }
@@ -24,7 +23,6 @@ class NoteListState extends State<NoteList> {
       noteList = List<Note>();
       updateListView();
     }
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Notes'),

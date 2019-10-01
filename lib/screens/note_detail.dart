@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -10,10 +9,7 @@ class NoteDetail extends StatefulWidget {
   final Note note;
   NoteDetail(this.note, this.appBarTitle);
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return NoteDetailState(this.note, this.appBarTitle);
-  }
+  State<StatefulWidget> createState() => NoteDetailState(this.note, this.appBarTitle);
 }
 
 class NoteDetailState extends State<NoteDetail> {
@@ -37,10 +33,10 @@ class NoteDetailState extends State<NoteDetail> {
     titleController.text = note.title;
     descriptionController.text = note.description;
 
-    // TODO: implement build
     return WillPopScope(
-      onWillPop: () {
-        moveToLastScreen();
+      onWillPop: () async {
+       moveToLastScreen();
+       return true;
       },
       child: Scaffold(
         appBar: AppBar(
